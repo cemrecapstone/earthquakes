@@ -1,0 +1,75 @@
+---
+output: 
+  html_document:
+    keep_md: true
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# mycapstone
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.com/cemreyilmaz/mycapstone.svg?branch=master)](https://travis-ci.com/cemreyilmaz/mycapstone)
+<!-- badges: end -->
+
+The goal of mycapstone is to analyze the earthquake data that were collected and 
+archived by NOAA and that can be found at 
+<https://www.ngdc.noaa.gov/hazard/strong.shtml>.
+
+## Installation
+
+You can install the released version of mycapstone from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("mycapstone")
+```
+
+## Example_clean
+
+This is a basic example which shows you how to clean your data:
+
+```{r example_clean}
+library(mycapstone)
+## basic example code
+data <- utils::read.delim("earthquakes.tsv")
+data <- eq_clean_data(data)
+data <- eq_location_clean(data)
+```
+
+## Example_visualize
+
+This is a basic example which shows you how to visualize your data:
+
+```{r example_visual}
+library(mycapstone)
+## basic example code
+data <- utils::read.delim("earthquakes.tsv")
+data <- eq_clean_data(data)
+data <- eq_location_clean(data)
+data <- dplyr::filter(data, Country == "TURKEY")
+geom_timeline_label(data,7.5)
+```
+
+## Example_map
+
+This is a basic example which shows you how to create an interactive map from your data:
+
+```{r example_map}
+library(mycapstone)
+## basic example code
+data <- utils::read.delim("earthquakes.tsv")
+data <- eq_clean_data(data)
+data <- eq_location_clean(data)
+data <- dplyr::filter(data, Country == "TURKEY")
+data <- dplyr::mutate(data, popup_text = eq_create_label(data))
+eq_map(data, "popup_text")
+```
