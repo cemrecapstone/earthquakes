@@ -15,6 +15,7 @@ Imports:
     stringr,
     ggplot2,
     ggrepel,
+    raster,
     leaflet
 Suggests: 
     rmarkdown,
