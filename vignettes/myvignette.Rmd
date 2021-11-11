@@ -1,5 +1,6 @@
 ---
 title: "myvignette"
+author: "Cemre Yilmaz"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{myvignette}
@@ -15,5 +16,25 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(mycapstone)
+library(earthquakes)
 ```
+This is my capstone project in the specialization program of "Mastering Software 
+Development in R Professional Certificate" by Roger D. Peng and Brooke Anderson 
+on Coursera. This package is created to work with the NOAA Significant Earthquakes
+dataset. It includes the following functions:
+* ** `eq_clean_data` ** which cleans the data.
+    + It creates the fields Date (in date format), Longitude (in numeric format) 
+    and Latitude (in numeric format).
+* ** `eq_location_clean` ** which arranges the location info.
+    + It creates the fields Country in which country the earthquake happened.
+    + It removes the country name from the field Location.Name.
+* ** `geom_timeline` ** which plots every earthquake from the min to max date.
+    + The color indicates the number of deaths.
+* ** `geom_timeline_label` ** which plots every earthquake from the min to max date.
+    + The color indicates the number of deaths.
+    + A lebel is shown for the earthquakes of which magnitude is above the threshold.
+* ** `eq_map` ** which creates an interactive map to show the geographical locations
+of the earthquakes in data.
+    + The size of circle represents the magnitude of the corresponding earthquake.
+    + When you click on a circle, you can see the the chosen annotation as pop-up.
+* ** `eq_create_label` ** which creates the pop-up message for eq_map() function.
