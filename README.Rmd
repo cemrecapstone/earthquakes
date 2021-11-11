@@ -14,22 +14,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-# mycapstone
+# earthquakes
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.com/cemreyilmaz/mycapstone.svg?branch=master)](https://travis-ci.com/cemreyilmaz/mycapstone)
+[![Travis build status](https://travis-ci.com/cemrecapstone/earthquakes.svg?branch=master)](https://travis-ci.com/cemrecapstone/earthquakes)
 <!-- badges: end -->
 
-The goal of mycapstone is to analyze the earthquake data that were collected and 
+The goal of earthquakes is to analyze the earthquake data that were collected and 
 archived by NOAA and that can be found at 
 <https://www.ngdc.noaa.gov/hazard/strong.shtml>.
 
 ## Installation
 
-You can install the released version of mycapstone from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of earthquakes from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("mycapstone")
+install.packages("earthquakes")
 ```
 
 ## Example_clean
@@ -37,7 +37,7 @@ install.packages("mycapstone")
 This is a basic example which shows you how to clean your data:
 
 ```{r example_clean}
-library(mycapstone)
+library(earthquakes)
 ## basic example code
 data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)
@@ -49,7 +49,7 @@ data <- eq_location_clean(data)
 This is a basic example which shows you how to visualize your data:
 
 ```{r example_visual}
-library(mycapstone)
+library(earthquakes)
 ## basic example code
 data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)
@@ -63,7 +63,7 @@ geom_timeline_label(data,7.5)
 This is a basic example which shows you how to create an interactive map from your data:
 
 ```{r example_map}
-library(mycapstone)
+library(earthquakes)
 ## basic example code
 data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)

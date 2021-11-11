@@ -1,25 +1,25 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# mycapstone
+# earthquakes
 
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.com/cemreyilmaz/mycapstone.svg?branch=master)](https://travis-ci.com/cemreyilmaz/mycapstone)
+status](https://travis-ci.com/cemrecapstone/earthquakes.svg?branch=master)](https://travis-ci.com/cemrecapstone/earthquakes)
 <!-- badges: end -->
 
-The goal of mycapstone is to analyze the earthquake data that were
+The goal of earthquakes is to analyze the earthquake data that were
 collected and archived by NOAA and that can be found at
 <https://www.ngdc.noaa.gov/hazard/strong.shtml>.
 
 ## Installation
 
-You can install the released version of mycapstone from
+You can install the released version of earthquakes from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("mycapstone")
+install.packages("earthquakes")
 ```
 
 ## Example_clean
@@ -27,7 +27,7 @@ install.packages("mycapstone")
 This is a basic example which shows you how to clean your data:
 
 ``` r
-library(mycapstone)
+library(earthquakes)
 ## basic example code
 data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)
@@ -39,7 +39,7 @@ data <- eq_location_clean(data)
 This is a basic example which shows you how to visualize your data:
 
 ``` r
-library(mycapstone)
+library(earthquakes)
 ## basic example code
 data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)
@@ -56,7 +56,7 @@ This is a basic example which shows you how to create an interactive map
 from your data:
 
 ``` r
-library(mycapstone)
+library(earthquakes)
 ## basic example code
 data <- utils::read.delim("earthquakes.tsv")
 data <- eq_clean_data(data)
@@ -67,5 +67,5 @@ eq_map(data, "popup_text")
 #> PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
 ```
 
-<div id="htmlwidget-89f744e1ea385b593883" style="width:100%;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-89f744e1ea385b593883">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[38.063,36.878,40.76,40.711,40.709,40.744,40.758,40.358,38.164,40.693,38.457],[30.134,35.307,29.97,29.949,30.045,30.266,31.161,42.346,38.777,32.992,31.351],[6.4,6.3,7.6,5.2,5.8,5.7,7.2,5.7,4.1,6,6],null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2},null,null,["<b>Location: <\/b>  Dinar, Evciler<br/><b>Magnitude: <\/b>6.4<br/><b>Total deaths: <\/b>95","<b>Location: <\/b> Adana, Ceyhan<br/><b>Magnitude: <\/b>6.3<br/><b>Total deaths: <\/b>145","<b>Location: <\/b> Istanbul, Kocaeli, Sakarya<br/><b>Magnitude: <\/b>7.6<br/><b>Total deaths: <\/b>17118","<b>Location: <\/b> Izmit<br/><b>Magnitude: <\/b>5.2<br/><b>Total deaths: <\/b>1","<b>Location: <\/b> Adapazari-Goluck-Kocaeli<br/><b>Magnitude: <\/b>5.8<br/><b>Total deaths: <\/b>7","<b>Location: <\/b> Adapazari, Koceali, Golcuk<br/><b>Magnitude: <\/b>5.7<br/><b>Total deaths: <\/b>2","<b>Location: <\/b> Bolu-Duzce-Kaynasli, Adapazari, Zonguldak<br/><b>Magnitude: <\/b>7.2<br/><b>Total deaths: <\/b>894","<b>Location: <\/b> Goresken, Erzurum Province<br/><b>Magnitude: <\/b>5.7<br/><b>Total deaths: <\/b>1","<b>Location: <\/b> Doganyol, Puturge<br/><b>Magnitude: <\/b>4.1<br/><b>Total deaths: <\/b>NA","<b>Location: <\/b> Cerkes, Cubuk, Orta<br/><b>Magnitude: <\/b>6<br/><b>Total deaths: <\/b>2","<b>Location: <\/b> Afyon-Bolvadin<br/><b>Magnitude: <\/b>6<br/><b>Total deaths: <\/b>6"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.878,40.76],"lng":[29.949,42.346]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-079469ab549691fa3d1d" style="width:100%;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-079469ab549691fa3d1d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[38.063,36.878,40.76,40.711,40.709,40.744,40.758,40.358,38.164,40.693,38.457],[30.134,35.307,29.97,29.949,30.045,30.266,31.161,42.346,38.777,32.992,31.351],[6.4,6.3,7.6,5.2,5.8,5.7,7.2,5.7,4.1,6,6],null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2},null,null,["<b>Location: <\/b>  Dinar, Evciler<br/><b>Magnitude: <\/b>6.4<br/><b>Total deaths: <\/b>95","<b>Location: <\/b> Adana, Ceyhan<br/><b>Magnitude: <\/b>6.3<br/><b>Total deaths: <\/b>145","<b>Location: <\/b> Istanbul, Kocaeli, Sakarya<br/><b>Magnitude: <\/b>7.6<br/><b>Total deaths: <\/b>17118","<b>Location: <\/b> Izmit<br/><b>Magnitude: <\/b>5.2<br/><b>Total deaths: <\/b>1","<b>Location: <\/b> Adapazari-Goluck-Kocaeli<br/><b>Magnitude: <\/b>5.8<br/><b>Total deaths: <\/b>7","<b>Location: <\/b> Adapazari, Koceali, Golcuk<br/><b>Magnitude: <\/b>5.7<br/><b>Total deaths: <\/b>2","<b>Location: <\/b> Bolu-Duzce-Kaynasli, Adapazari, Zonguldak<br/><b>Magnitude: <\/b>7.2<br/><b>Total deaths: <\/b>894","<b>Location: <\/b> Goresken, Erzurum Province<br/><b>Magnitude: <\/b>5.7<br/><b>Total deaths: <\/b>1","<b>Location: <\/b> Doganyol, Puturge<br/><b>Magnitude: <\/b>4.1<br/><b>Total deaths: <\/b>NA","<b>Location: <\/b> Cerkes, Cubuk, Orta<br/><b>Magnitude: <\/b>6<br/><b>Total deaths: <\/b>2","<b>Location: <\/b> Afyon-Bolvadin<br/><b>Magnitude: <\/b>6<br/><b>Total deaths: <\/b>6"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.878,40.76],"lng":[29.949,42.346]}},"evals":[],"jsHooks":[]}</script>
